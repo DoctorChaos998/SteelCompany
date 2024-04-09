@@ -1,0 +1,19 @@
+.footer{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.componentWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.componentHeader{
+  display: flex;
+  gap: 5px;
+}

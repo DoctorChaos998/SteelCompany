@@ -1,0 +1,88 @@
+.container{
+  height: 100%;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainImage{
+  position: relative;
+  height: 80%;
+  width: 100%;
+}
+
+.carouselWrapper{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.carouselContainer{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel{
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem{
+  position: relative;
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60%;
+  max-height: 60%;
+  cursor: pointer;
+
+  &:hover::before{
+    display: block;
+    border: rgba(dodgerblue, 0.5) 2px solid;
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.activeCarouselItem{
+  &:hover::before, &::before{
+    display: block;
+    border: rgba(dodgerblue, 1) 2px solid;
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+
+.icon{
+  font-size: 1.1em;
+  user-select: none;
+}
+
+.button{
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  outline: none;
+  min-width: 30px;
+  background-color: whitesmoke;
+  font-size: 2em;
+  color: gray;
+  &:hover{
+    color: black;
+  }
+}
